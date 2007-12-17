@@ -14,7 +14,6 @@ URL:		http://tmda.net
 BuildArch:	noarch
 Requires:	python-cdb
 BuildRequires:	python 
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 TMDA is an OSI certified software application designed to
