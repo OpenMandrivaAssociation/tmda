@@ -1,13 +1,13 @@
 %define name	tmda
-%define version 1.0.3
-%define release %mkrel 11
+%define version 1.1.12
+%define release %mkrel 1
 
 
 Summary:	Tagged Message Delivery Agent
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	http://download.sourceforge.net/%{name}/%{name}-%{version}.tgz
 License:	BSD
 Group:		Networking/Mail
 URL:		http://tmda.net
@@ -37,7 +37,7 @@ Gnus (and perhaps other Emacs based mail/news readers).
 %setup -q
 
 %build
-mv htdocs/README README.htdocs
+mv doc/README README2
 
 %install
 [ -n "%{buildroot}" -a "%{buildroot}" != / ] && rm -rf %{buildroot}
@@ -60,7 +60,7 @@ install -m0644 contrib/tmda.el %{buildroot}%{_datadir}/emacs/site-lisp
 
 %files
 %defattr(-,root,root)
-%doc ChangeLog CODENAMES COPYING CRYPTO INSTALL README* THANKS UPGRADE contrib htdocs/{*.html,img/}
+%doc ChangeLog CODENAMES COPYING CRYPTO INSTALL README* THANKS UPGRADE contrib doc/html/{*.html,attachments/} doc/pdf/*
 %attr(0755,root,root) %{_bindir}/*
 %{py_puresitedir}/TMDA/
 %{_datadir}/tmda/*
