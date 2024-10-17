@@ -10,7 +10,7 @@ Release:	%{release}
 Source0:	http://download.sourceforge.net/%{name}/%{name}-%{version}.tgz
 License:	BSD
 Group:		Networking/Mail
-URL:		http://tmda.net
+URL:		https://tmda.net
 BuildArch:	noarch
 Requires:	python-cdb
 BuildRequires:	python 
